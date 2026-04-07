@@ -63,16 +63,3 @@ gaps AS (
 )
 SELECT *
 FROM gaps;
-
-
-
-
-
-
-SELECT *
-FROM users u1
-WHERE amount > (
-	SELECT avg(amount)
-	FROM users u2
-	WHERE u1.id = u2.id
-)
